@@ -14,3 +14,15 @@ Fib(𝑛) = 0 𝑠𝑒 𝑛 = 0
 1 𝑠𝑒 𝑛 = 1
 Fib(𝑛 − 1) + Fib(𝑛 − 2) 𝑠𝑒 𝑛 > 1
 -}
+
+fibonacci :: Int -> Int
+fibonacci 0 = 0
+fibonacci 1 = 1
+fibonacci num = fibonacci (num - 1) + fibonacci (num - 2)
+
+main :: IO ()
+main = do
+    putStrLn "Informe o número:"
+    numero <- readLn
+
+    putStrLn ("Número " ++ show(numero) ++ " na sequencia fibonacci é " ++ show(fibonacci(numero)))
