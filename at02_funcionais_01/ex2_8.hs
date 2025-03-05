@@ -13,3 +13,15 @@ RA 10416804
 Por exemplo, o fatorial duplo de 8 é 8x6x4x2 = 384, e o fatorial duplo de 7 é 7x5x3x1 = 105.
 Defina uma função em Haskell para calcular o fatorial duplo usando recursividade.
 -}
+
+fatorialDuplo :: Int -> Int
+fatorialDuplo 1 = 1
+fatorialDuplo 0 = 1
+fatorialDuplo num = num * fatorialDuplo(num-2)
+
+main :: IO ()
+main = do
+    putStrLn "Informe o numero:"
+    a <- readLn
+
+    putStrLn ("fatorial duplo = " ++ show(fatorialDuplo a))

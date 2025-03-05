@@ -15,6 +15,8 @@ x_n = 0.5 * (x_n_1 + (A / x_n_1));
 
 ou 
 
+<< conversão para C feita com ajuda de IA!>>
+
 double calcular_xn(double A, int n) {
     double x = 1.0; // x_0 = 1
     for (int i = 1; i <= n; i++) {
@@ -27,3 +29,18 @@ Para começar, tente entender o funcionamento do algoritmo abaixo para o cálcul
 Sugestão: faça um teste de mesa. Entendido o algoritmo escreva uma função em Haskell que calcule a raiz quadrada de um número usando o algoritmo
 definido pela expressão acima, considere que sua função terá o número de “iterações” (chamadas recursivas) informado por parâmetro. 
 -}
+
+-- FALTA NAO ENTENDI!
+
+raizQuadrada :: Double -> Int -> Double
+raizQuadrada a n = iterar n 1.0
+  where
+    iterar 0 x = x
+    iterar i x = iterar (i - 1) (0.5 * (x + a / x))
+
+main :: IO ()
+main = do
+    putStrLn "Informe um numero:"
+    a <- readLn
+
+    putStrLn ("raiz quadrada = " ++ show(raizQuadrada a 5))

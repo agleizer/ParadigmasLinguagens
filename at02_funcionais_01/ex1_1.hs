@@ -22,6 +22,8 @@ EXECUTAR
 meu_programa.exe  # No Windows
 -}
 
+-- RESOLUÇÃO POR IA, PRECISEI DE UMA RESOLUÇÃO PRONTA PARA ENTENDER COMO COMEÇAR A PROGRAMAR EM HASKELL...
+
 -- Definição da função ehPar, que recebe um Int e retorna um Bool
 -- Diferente de C, a assinatura de tipo é explicitada antes da função
 ehPar :: Int -> Bool  

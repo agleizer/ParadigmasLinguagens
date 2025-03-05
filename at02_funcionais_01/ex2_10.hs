@@ -11,10 +11,23 @@ RA 10416804
 {-
 10. Escreva uma função equivalente em Haskell para o código a função abaixo que está no paradigma imperativo:
 int função( int n) {
-int x = 1;
-for (int i = 1; i <= 10; i++) {
-x = x*2;
+    int x = 1;
+    for (int i = 1; i <= 10; i++) {
+        x = x*2;
+    }
+    return x;
 }
-return x;
-}
+
+Obs! Acho que essa função está errada.. n nunca é utilizado..
+
 -}
+
+funcao :: Int -> Int
+funcao n = 1
+
+main :: IO ()
+main = do
+    putStrLn "Informe um numero:"
+    a <- readLn
+
+    putStrLn ("funcao = " ++ show(funcao a))
