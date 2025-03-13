@@ -13,11 +13,11 @@ Dada uma lista de inteiros, escreva uma função que devolve a quantidade de
 elementos pares na lista.
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+qtdPares :: [Int] -> Int
+qtdPares lista = length [x | x <- lista, mod x 2 == 0]
 
 main :: IO ()
 main = do
-  putStrLn "Digite um número:"
-  input <- readLn
-  
+  putStrLn "Digite uma lista:"
+  lista <- readLn
+  print (qtdPares lista)

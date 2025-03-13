@@ -15,11 +15,24 @@ a função retorna True e caso contrário False. Faça uma versão recursiva e u
 versão com geradores de listas.
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+numIgualParesImpares :: [Int] -> Bool
+numIgualParesImpares lista = igualdade
+  where
+    qtdPares = length [x | x <- lista, mod x 2 == 0]
+    qtdImpares = length [x | x <- lista, mod x 2 /= 0]
+    igualdade = qtdPares == qtdImpares
+
+numIgualParesImparesRecursivo :: [Int] -> Bool
+numIgualParesImparesRecursivo [] = True
+numIgualParesImparesRecursivo (x:xs)
+  | mod x 2 == 0 = 1 + numPares == numImpares
+  | otherwise = numPares == 1 + numImpares
+  where
+    numPares = length [y | y <- xs, mod y 2 == 0]
+    numImpares = length [y | y <- xs, mod y 2 /= 0]
 
 main :: IO ()
 main = do
-  putStrLn "Digite um número:"
-  input <- readLn
-  
+  putStrLn "Digite uma lista:"
+  lista <- readLn
+  print (numIgualParesImpares lista)

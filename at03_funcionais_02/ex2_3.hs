@@ -14,11 +14,11 @@ os elementos menores ou igual ao primeiro elemento da lista. (partição do
 QuickSort).
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+menorIgualPrimeiro :: [Int] -> [Int]
+menorIgualPrimeiro lista = [x | x <- lista, x <= (head lista)]
 
 main :: IO ()
 main = do
-  putStrLn "Digite um número:"
-  input <- readLn
-  
+  putStrLn "Digite uma lista:"
+  lista <- readLn
+  print (menorIgualPrimeiro lista)

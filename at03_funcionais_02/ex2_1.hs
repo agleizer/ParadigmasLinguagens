@@ -14,11 +14,12 @@ função recebe como argumento um número natural maior que 1, se o número
 informado é primo é devolvido True e caso contrário False.
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+ehPrimo :: Int -> Bool
+ehPrimo n = length [x | x <- [2..n-1], mod n x == 0] == 0
 
 main :: IO ()
 main = do
   putStrLn "Digite um número:"
-  input <- readLn
+  num <- readLn
+  print (ehPrimo num)
   

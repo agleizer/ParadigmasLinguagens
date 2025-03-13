@@ -16,11 +16,13 @@ Por exemplo se for informado a lista [3,4,1,2,6,7] para a função a saída ser
 [4,2,6,3,1,7].
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+ordenacaoPorPares :: [Int] -> [Int]
+ordenacaoPorPares [] = []
+ordenacaoPorPares lista = if mod (head lista) 2 == 0 then (head lista) : ordenacaoPorPares (tail lista) else ordenacaoPorPares (tail lista) ++ [head lista]
 
 main :: IO ()
 main = do
-  putStrLn "Digite um número:"
-  input <- readLn
+  putStrLn "Digite uma lista:"
+  lista <- readLn
+  print(ordenacaoPorPares lista)
   

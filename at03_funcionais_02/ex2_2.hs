@@ -13,11 +13,13 @@ Dada uma lista de inteiros e um valor inteiro m, escreva uma função que devolv
 uma lista com todos os elementos menores ou igual a m.
 -}
 
-funcao :: Int -> Int
-funcao n = xxxx
+menoresIguais :: [Int] -> Int -> [Int]
+menoresIguais lista num = [x | x <- lista, x <= num]
 
 main :: IO ()
 main = do
+  putStrLn "Digite uma lista:"
+  lista <- readLn
   putStrLn "Digite um número:"
-  input <- readLn
-  
+  num <- readLn
+  print (menoresIguais lista num)
