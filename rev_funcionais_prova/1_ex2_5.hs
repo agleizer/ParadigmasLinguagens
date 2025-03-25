@@ -23,3 +23,20 @@ A   B     Parcelas
 Soma: 2214
 Escreva uma função em Haskell que calcula a multiplicação russa de 2 entradas;
 -}
+
+multRussa :: Int -> Int -> Int
+multRussa 0 numB = 0
+multRussa numA 0 = 0
+multRussa 1 numB = numB
+multRussa numA numB
+  | mod numA 2 /= 0 = numB + multRussa (div numA 2) (numB * 2)
+  | otherwise = multRussa (div numA 2) (numB * 2)
+
+main :: IO ()
+main = do
+    print "Informe um numero: "
+    num1 <- readLn
+    print "Informe outro numero: "
+    num2 <- readLn
+
+    print(show(multRussa num1 num2))

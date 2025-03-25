@@ -21,3 +21,15 @@ int mdc( int m, int n ){
 }
 
 -}
+
+mdc :: Int -> Int -> Int
+mdc m 0 = m
+mdc m n = mdc n (mod m n)
+
+main :: IO ()
+main = do
+    print "Informe m: "
+    m <- readLn
+    print "Informe n:"
+    n <- readLn
+    print(mdc m n)

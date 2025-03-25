@@ -14,3 +14,7 @@ final. Você não pode usar um gerador de lista para resolver esse problema.
 Por exemplo se for informado a lista [3,4,1,2,6,7] para a função a saída ser
 [4,2,6,3,1,7].
 -}
+
+ordenarPorPares :: [Int] -> [Int]
+ordenarPorPares [] = []
+ordenarPorPares (x:xs) = if odd x then ordenarPorPares xs ++ [x] else [x] ++ ordenarPorPares xs
