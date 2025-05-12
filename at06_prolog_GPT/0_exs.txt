@@ -1,0 +1,51 @@
+Fundamentos (1–10): Fatos, regras simples e unificação
+
+    Defina alguns fatos sobre parentesco (pai, mãe, irmão) e crie regras como avo/2, irmao/2, tio/2.
+
+    Verifique se uma pessoa é maior de idade. Defina fatos com idade/2 e uma regra maior_de_idade/1.
+
+    Crie um predicado que verifica se alguém é aluno de um curso. Ex: aluno(joao, matematica).
+
+    Defina um conjunto de livros e seus autores. Faça uma regra que retorna se um autor escreveu um livro.
+
+    Crie um predicado que define se dois números são iguais. Use apenas unificação, sem operadores aritméticos.
+
+    Implemente um predicado quadrado/2 que relaciona um número ao seu quadrado.
+
+    Crie um predicado gosta/2 e amizade/2. João gosta de Maria, Maria gosta de Ana. João é amigo de Ana?
+
+    Implemente uma regra eh_maior/2 que compara dois números e diz se o primeiro é maior.
+
+    Faça um predicado que define se uma letra é vogal.
+
+    Crie uma base de fatos animal/2 (animal, tipo) e uma regra mamifero/1.
+
+🟡 Listas e estruturação (11–20): Head, tail, recursão simples
+
+    Implemente um predicado tamanho/2 que retorna o tamanho de uma lista.
+
+    Crie um predicado soma_lista/2 que soma os elementos de uma lista.
+
+    Crie pertence/2 que verifica se um elemento está em uma lista.
+
+    Implemente ultimo/2 que retorna o último elemento de uma lista.
+
+    Crie concatena/3 para concatenar duas listas.
+
+    Escreva um predicado reverter/2 que inverte uma lista.
+
+    Implemente par/1 e use-o para filtrar os números pares de uma lista.
+
+    Crie maior_elemento/2 que retorna o maior elemento de uma lista.
+
+    Implemente ocorrencias/3 que conta quantas vezes um elemento aparece em uma lista.
+
+    Faça duplica/2, que recebe uma lista e devolve outra onde cada elemento aparece duas vezes seguidas.
+
+🔵 Raciocínio e recursão intermediária (21–30): Predicados compostos, busca, lógica indutiva
+
+    Implemente todos_pares/1 que verifica se todos os elementos da lista são pares.
+
+    Crie intersecao/3 que retorna os elementos comuns entre duas listas.
+
+    Implemente remover/3 que remove todas as ocorrências de um elemento de uma lista.
