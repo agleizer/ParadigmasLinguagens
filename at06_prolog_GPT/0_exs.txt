@@ -1,4 +1,4 @@
-Fundamentos (1–10): Fatos, regras simples e unificação
+🟡 Fundamentos (1–10): Fatos, regras simples e unificação
 
     Defina alguns fatos sobre parentesco (pai, mãe, irmão) e crie regras como avo/2, irmao/2, tio/2.
 
@@ -49,3 +49,17 @@ Fundamentos (1–10): Fatos, regras simples e unificação
     Crie intersecao/3 que retorna os elementos comuns entre duas listas.
 
     Implemente remover/3 que remove todas as ocorrências de um elemento de uma lista.
+
+    Faça um predicado palindromo/1 que verifica se uma lista é igual à sua reversa.
+
+    Escreva um predicado ordenada/1 que verifica se uma lista está ordenada.
+
+    Implemente sublista/2 que verifica se a primeira lista é uma sublista da segunda.
+
+    Crie repete/3, onde repete(X, N, L) gera uma lista L com o elemento X repetido N vezes.
+
+    Implemente remove_duplicados/2, que remove elementos duplicados de uma lista.
+
+    Implemente merge_sort/2 (ou uma versão simplificada) para ordenar listas.
+
+    Faça um predicado rota/3 com base em fatos conecta/2 que diga se há um caminho entre dois pontos.
