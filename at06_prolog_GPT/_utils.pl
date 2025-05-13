@@ -48,15 +48,29 @@ menor_elemento([H|T], Min) :-
 
 
 % 10. remover_duplicados/2 — remove elementos repetidos da lista
+remover_duplicados([], []).
 
+% se H é duplicado
+remover_duplicados([H|T], R) :-
+    pertence(H, T),
+    remover_duplicados(T, R).
+
+% se não
+remover_duplicados([H|T], [H|R]) :-
+    \+ pertence(H, T),
+    remover_duplicados(T, R).
 
 
 % 11. ultimo/2 — retorna o último elemento da lista
-
+ultimo([], []).
+ultimo([X], X).
+ultimo([_|T], Ultimo) :- ultimo(T, Ultimo2), Ultimo is Ultimo2.
 
 
 % 12. inicial/2 — retorna a lista sem o último elemento
-
+inicial([_], []).
+inicial([H|T], [H|R]) :-
+    inicial(T, R).
 
 
 % 13. encontrar/3 — encontra o primeiro elemento que satisfaz uma condição, dada por outro predicado
